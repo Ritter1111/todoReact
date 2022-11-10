@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { propTypes } from "react-bootstrap/esm/Image";
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 function AddTodo({ todo, setTodo }) {
   const [value, setValue] = useState("");
@@ -14,16 +14,16 @@ function AddTodo({ todo, setTodo }) {
         status: true,
       },
     ]);
-    setValue('')
+    setValue("");
   }
   return (
     <div>
       <input
-        placeholder="Введите задачу"
+        placeholder="Enter the task"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={saveTodo}>Сохранить</button>
+      <button onClick={saveTodo}>Save</button>
     </div>
   );
 }
