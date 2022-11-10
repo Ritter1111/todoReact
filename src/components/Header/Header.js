@@ -1,8 +1,13 @@
 import React from 'react';
 
+
 function Header() {
     return (
-        <div>Todo List</div>
+        <div className='header_logo'>
+            <div className='header'>
+                <div className='header_first'>Simple Todo List</div>
+            </div>
+        </div>
     );
 }
 

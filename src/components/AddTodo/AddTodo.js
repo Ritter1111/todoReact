@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { v4 as uuidv4 } from "uuid";
+import { Row, Col, FormControl } from "react-bootstrap";
 
 function AddTodo({ todo, setTodo }) {
   const [value, setValue] = useState("");
@@ -17,14 +18,19 @@ function AddTodo({ todo, setTodo }) {
     setValue("");
   }
   return (
-    <div>
-      <input
-        placeholder="Enter the task"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <button onClick={saveTodo}>Save</button>
-    </div>
+    <Row>
+      <Col className="addTodoForm">
+        <FormControl
+          className="add-task_input"
+          placeholder="Enter the task"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <button className="add-task_button" onClick={saveTodo}>
+          Save
+        </button>
+      </Col>
+    </Row>
   );
 }
 
