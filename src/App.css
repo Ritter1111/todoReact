@@ -63,20 +63,21 @@ body {
   white-space: nowrap;
   margin-left: 12px;
 }
-.addTodoForm{
-    display: flex;
-    flex: 1;
-  
+.addTodoForm {
+  display: flex;
+  flex: 1;
 }
-.listItem{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 12px;
-    background: white;
-    padding: 6px;
-    border-radius: 6px;
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 12px;
+  background: white;
+  padding: 6px;
+  border-radius: 6px;
 }
-.btn{
-    
+.close {
+  color: black;
+  text-decoration: line-through;
 }
+

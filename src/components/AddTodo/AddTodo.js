@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { propTypes } from "react-bootstrap/esm/Image";
+import propTypes from "prop-types";
 import { v4 as uuidv4 } from "uuid";
 import { Row, Col, FormControl } from "react-bootstrap";
 
@@ -12,7 +12,7 @@ function AddTodo({ todo, setTodo }) {
       {
         id: uuidv4(),
         title: value,
-        status: true,
+        status: false,
       },
     ]);
     setValue("");
@@ -37,5 +37,5 @@ function AddTodo({ todo, setTodo }) {
 export default AddTodo;
 AddTodo.propTypes = {
   todo: propTypes.array,
-  setTodo: propTypes.function,
+  setTodo: propTypes.func,
 };
