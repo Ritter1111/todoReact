@@ -5,14 +5,15 @@ import { v4 as uuidv4 } from "uuid";
 export default function InputTask({ setShowed, setProjectItem }) {
   const inputRef = useRef(null);
   function saveForm() {
-    setShowed(true);
+    setShowed(false);
     setProjectItem(uuidv4(), inputRef.current.value);
   }
   return (
     <div>
-      <input placeholder="Enter the task" ref={inputRef} />
-     <button onClick={saveForm}>Save</button>
+       <input placeholder="Enter the task" ref={inputRef} />
+       <button onClick={saveForm}>Save</button>     
     </div>
+    
   );
 }
 InputTask.propTypes = {

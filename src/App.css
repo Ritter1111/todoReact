@@ -80,4 +80,15 @@ body {
   color: black;
   text-decoration: line-through;
 }
-
+.btn{
+  float: right;
+}
+.button_new{
+ margin-top: 50px;
+ text-align: center;
+}
+.add-project-element{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

@@ -6,12 +6,23 @@ import AddProject from "./components/AddProject/AddProject";
 
 function App() {
   const [projectItem, setProjectItem] = useState([
-    // {
-    //   id: 1,
-    //   title: "first todo",
-    //   status: false,
-    //   tasks:[]
-    // },
+    {
+      id: 1,
+      title: "first todo",
+      status: false,
+      tasks: [
+        {
+          id: 1,
+          name: "titujkh",
+          isCompleted: false,
+        },
+        {
+          id: 2,
+          name: "tih",
+          isCompleted: false,
+        },
+      ],
+    },
     // {
     //   id: 2,
     //   title: "second todo",
@@ -23,6 +34,25 @@ function App() {
     //   status: false,
     // },
   ]);
+
+  function addTaskToProject(projectId, taskId, taskName) {
+    const projects = projectItem.map((element) => {
+      if (element.id != projectId) {
+        return element;
+      } else {
+        return {
+          ...element,
+          tasks: [
+            ...element.tasks,
+            { id: taskId, name: taskName, isCompleted: false },
+          ],
+        };
+      }
+    });
+
+    setProjectItem(projects);
+  }
+
   function newProject(id, title) {
     setProjectItem([
       ...projectItem,
@@ -30,6 +60,7 @@ function App() {
         id: id,
         title: title,
         status: false,
+        tasks: [],
       },
     ]);
   }
@@ -37,8 +68,11 @@ function App() {
   return (
     <Container>
       <Header />
+      <ProjectList
+        projectItem={projectItem}
+        addTaskToProject={addTaskToProject}
+      />
       <AddProject setProjectItem={newProject} />
-      <ProjectList projectItem={projectItem} />
     </Container>
   );
 }

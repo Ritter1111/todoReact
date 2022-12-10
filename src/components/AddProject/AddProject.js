@@ -8,11 +8,16 @@ export default function AddProject({ setProjectItem }) {
 
   return (
     <>
-   
+    <div className="add-project-element">
       <Button setShowed={setShowed} showed={showed} />
       {showed ? (
-        <InputTask showed={showed} setShowed={setShowed} setProjectItem={setProjectItem} />
+        <InputTask
+          showed={showed}
+          setShowed={setShowed}
+          setProjectItem={setProjectItem}
+        />
       ) : null}
+      </div>
     </>
   );
 }

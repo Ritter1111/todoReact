@@ -5,7 +5,7 @@ export default function Button({ showed, setShowed }) {
   const onClick = () => {
     setShowed(true);
   };
-  return <div>{!showed && <button onClick={onClick}>Add Task</button>}</div>;
+  return <div>{!showed && <button onClick={onClick}>Add Project</button>}</div>;
 }
 Button.propTypes = {
   showed: propTypes.bool,
